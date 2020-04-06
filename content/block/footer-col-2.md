@@ -1,3 +1,3 @@
-#### Footer col 2
+#### Kursens chattar
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Här kan man få hjälp på [gitter](https://gitter.im/mosbth/oophp) eller [discord](https://discordapp.com/channels/118332969004957705/689407159125016650).

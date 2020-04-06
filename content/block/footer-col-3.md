@@ -1,3 +1,3 @@
-#### Footer col 3
+#### En tredje kolumn
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Ja, jag kommer nog på något att lägga här också!
