@@ -10,12 +10,13 @@ class Guess
     /**
     * @var int $number   The current secret number.
     * @var int $tries    Number of tries left.
+    * @var string $res   Game result.
+    * @var int $guess    The guess
     */
 
     private $number;
     private $tries;
-    public $res;
-    public $guess;
+    private $res;
 
     /**
     * Constructor to initiate the object with current game settings,
@@ -54,7 +55,7 @@ class Guess
     /**
     * Get number of tries left.
     *
-    * @return int as number of tries made.
+    * @return int as number of tries left.
     */
     public function tries()
     {

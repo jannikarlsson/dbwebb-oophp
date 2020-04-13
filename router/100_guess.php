@@ -7,7 +7,7 @@
 
 
 /**
- * Init and start the game
+ * Init and start the game from a link
  */
 $app->router->get("guess/init", function () use ($app) {
     $game = new Janni\Guess\Guess();
@@ -17,7 +17,7 @@ $app->router->get("guess/init", function () use ($app) {
 });
 
 /**
- * Init and start the game
+ * Init and start the game from a button
  */
 $app->router->post("guess/init", function () use ($app) {
     $game = new Janni\Guess\Guess();
@@ -27,7 +27,7 @@ $app->router->post("guess/init", function () use ($app) {
 });
 
 /**
- * Cheat
+ * Cheat and show the number
  */
 $app->router->post("guess/cheat", function () use ($app) {
     $doCheat = $_POST["doCheat"] ?? null;
@@ -68,7 +68,7 @@ $app->router->get("guess/play", function () use ($app) {
 });
 
 /**
- * Play the game
+ * Make a guess
  */
 $app->router->post("guess/play", function () use ($app) {
     $guess = $_POST["guess"] ?? null;
@@ -81,11 +81,11 @@ $app->router->post("guess/play", function () use ($app) {
             $game = new Janni\Guess\Guess($number, $tries);
             $res = $game->makeGuess((int)$guess);
             $tries = $game->tries();
-        } catch (GuessException $e) {
-            $res = "It will have to be between 1 and 100.";
-        }
-        $_SESSION["tries"] = $tries;
-        $_SESSION["res"] = $res;
+    } catch (Janni\Guess\GuessException $e) {
+        $res = "It will have to be between 1 and 100.";
+    }
+    $_SESSION["tries"] = $tries;
+    $_SESSION["res"] = $res;
 
     return $app->response->redirect("guess/play");
 });

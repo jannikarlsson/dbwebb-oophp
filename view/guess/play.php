@@ -29,7 +29,7 @@ if ($_SESSION["tries"] >= 1) { ?>
 
 if ($res) : ?>
 <p><?= $res ?></p>
-    <?php if ($guess != $number) { ?>
+    <?php if ($tries != 0) { ?>
         <p>Tries left: <?= $tries ?></p>
     <?php } ?>
 <?php endif; ?>
