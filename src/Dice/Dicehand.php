@@ -61,8 +61,6 @@ class Dicehand
     {
         if ($dice == 1) {
             $this->one = true;
-        } else {
-            $this->one = false;
         }
     }
 
@@ -112,7 +110,7 @@ class Dicehand
     * @return boolean
     */
 
-    public function isOne()
+    public function getOne()
     {
         return $this->one;
     }

@@ -159,7 +159,7 @@ class Game
         foreach ($this->diceArray as $dice) {
             $this->histogram->roll($dice);
         }
-        $this->one = $this->dicehand->isOne();
+        $this->one = $this->dicehand->getOne();
         $this->dicehand->storeTemp($this->tempSum);
         $this->tempSum = $this->dicehand->getTemp();
     }
