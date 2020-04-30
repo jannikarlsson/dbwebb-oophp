@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * Test cases for class Guess.
+ * @SuppressWarnings(PHPMD)
  */
 class GuessCreateObjectTest extends TestCase
 {

@@ -8,7 +8,8 @@
         "psr-4": {
             "Anax\\": "src/",
             "Janni\\": "src/"
-        }
+        },
+         "files": ["src/function.php"]
     },
     "require": {
         "anax/anax-oophp-me": "^2.0.0@beta"

@@ -110,7 +110,7 @@ class Dicehand
     * @return boolean
     */
 
-    public function getOne()
+    public function isOne()
     {
         return $this->one;
     }

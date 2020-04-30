@@ -159,7 +159,7 @@ class Game
         foreach ($this->diceArray as $dice) {
             $this->histogram->roll($dice);
         }
-        $this->one = $this->dicehand->getOne();
+        $this->one = $this->dicehand->isOne();
         $this->dicehand->storeTemp($this->tempSum);
         $this->tempSum = $this->dicehand->getTemp();
     }
@@ -167,7 +167,7 @@ class Game
     /**
     * Returns if round is lost
     *
-    * @return array
+    * @return string
     */
 
     public function getOne()
