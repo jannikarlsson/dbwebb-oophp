@@ -264,22 +264,22 @@ class MovieController implements AppInjectableInterface
     public function movieEditAction() : object
     {
         $title = "Edit a movie | oophp";
-
         $movieId = getPost("movieId") ?: getGet("movieId");
-
-        $this->app->db->connect();
-        $sql = "SELECT * FROM movie WHERE id = ?;";
-        $movie = $this->app->db->executeFetchAll($sql, [$movieId]);
-        $movie = $movie[0];
-
-        $this->app->page->add("movie/header");
-        $this->app->page->add("movie/movie-edit", [
-            "movie" => $movie
-        ]);
-
-        return $this->app->page->render([
-            "title" => $title,
-        ]);
+        if (is_numeric($movieId)) {
+            $this->app->db->connect();
+            $sql = "SELECT * FROM movie WHERE id = ?;";
+            $movie = $this->app->db->executeFetchAll($sql, [$movieId]);
+            $movie = $movie[0];
+            $this->app->page->add("movie/header");
+            $this->app->page->add("movie/movie-edit", [
+                "movie" => $movie
+            ]);
+            return $this->app->page->render([
+                "title" => $title,
+            ]);
+        } else {
+            return $this->app->response->redirect("movie/movie-select");
+        }
     }
 
     /**

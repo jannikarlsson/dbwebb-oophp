@@ -1,3 +1,8 @@
+<?php
+
+namespace Anax\View;
+
+?>
 <form method="post">
     <fieldset>
     <legend>Select Movie</legend>
@@ -18,6 +23,6 @@
         <input type="submit" name="doEdit" value="Edit" formaction="movie-edit">
         <input type="submit" name="doDelete" value="Delete" formaction="delete">
     </p>
-    <p><a href="index">Show all</a></p>
+    <p><a href=<?= url("movie/index") ?>>Show all</a></p>
     </fieldset>
 </form>

@@ -24,9 +24,5 @@
         <input type="submit" name="doSave" value="Save">
         <input type="reset" value="Reset">
     </p>
-    <p>
-        <a href="movie-select">Select movie</a> |
-        <a href="index">Show all</a>
-    </p>
     </fieldset>
 </form>
