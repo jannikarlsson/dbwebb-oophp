@@ -73,5 +73,10 @@ return [
             "url" => "movie/index",
             "title" => "Movie database",
         ],
+        [
+            "text" => "Textfilters",
+            "url" => "textfilter/linksbr",
+            "title" => "Testing filters",
+        ],
     ],
 ];
