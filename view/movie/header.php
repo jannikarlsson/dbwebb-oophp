@@ -3,15 +3,6 @@
 namespace Anax\View;
 
 ?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title><?= $title . $titleExtended ?></title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
 <navbar class="navbar">
     <a href=<?= url("movie/select") ?>>SELECT *</a> |
     <a href=<?= url("movie/index") ?>>Show all movies</a> |

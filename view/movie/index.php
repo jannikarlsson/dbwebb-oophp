@@ -14,7 +14,7 @@ if (!$resultset) {
 }
 $defaultRoute = "?"
 ?>
-
+<article>
 <p>Items per page:
     <a href="<?= mergeQueryString(["hits" => 2], $defaultRoute) ?>">2</a> |
     <a href="<?= mergeQueryString(["hits" => 4], $defaultRoute) ?>">4</a> |
@@ -47,3 +47,4 @@ $defaultRoute = "?"
         <a href="<?= mergeQueryString(["page" => $i], $defaultRoute) ?>"><?= $i ?></a>
     <?php endfor; ?>
 </p>
+</article>

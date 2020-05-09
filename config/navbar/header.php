@@ -78,5 +78,10 @@ return [
             "url" => "textfilter/linksbr",
             "title" => "Testing filters",
         ],
+        [
+            "text" => "Blog",
+            "url" => "blog/overview",
+            "title" => "Blog",
+        ],
     ],
 ];
