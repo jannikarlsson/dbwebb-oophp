@@ -15,7 +15,6 @@ function getGet($key, $default = null)
 }
 
 
-
 /**
 * Get value from POST variable or return default value.
 *
@@ -90,7 +89,7 @@ function orderby2($column, $route)
     <a href="$asc">&darr;</a>
     <a href="$desc">&uarr;</a>
     </span>
-    EOD;
+EOD;
 }
 
 
